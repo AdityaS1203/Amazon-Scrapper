@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Amazon scrap</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="div1">
+      <h1>Buy as per your budget</h1>
+    </div>
+
+<div class="div3">
+  <form class="" action="/" method="post">
+    <input type="text" name="link" autofocus autocomplete="off" placeholder="Enter a new link" required>
+    <input type="text" name="price" autofocus autocomplete="off" placeholder="Enter the price" required>
+    <input type="text" name="alias" autocomplete="off" placeholder="Enter Alias for the link" >
+    <button type="submit" name="button" class="btn">Add</button>
+  </form>
+</div>
+<div class="div2">
+    <form class="" action="/delete" method="post">
+      <table>
+        <thead>
+          <tr>
+            <th>Alias</th>
+            <th>Current Price</th>
+            <th>Budget</th>
+            <th>Link To Product</th>
+            <th>Delete item</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%for(var i=0;i<newlistitem.length;i++){%>
+            <tr>
+              <td><%=aliasName[i]%></td>
+              <td><%=currPrice[i]%></td>
+              <td><%=newpriceitem[i]%></td>
+              <td><a href=<%=newlistitem[i]%>>link</a></td>
+              <td > <button type="submit" value="<%=i%>" name="btn"  >X</button></td>
+            </tr>
+          <%}%>
+        </tbody>
+      </table>
+      <!-- <ul style="list-style: none;" class="unli">
+      <%for(var i=0;i<newlistitem.length;i++){%>
+        <li> <a href=<%=newlistitem[i] %>>link</a> <%=newpriceitem[i] %><span class="span"> <button type="submit" value="<%=i%>" name="btn" class="button">X</button></span></li>
+      <%}%>
+    </ul> -->
+    </form>
+
+</div>
+ </body>
+ <script src="js/index.js" charset="utf-8"></script>
+</html>
